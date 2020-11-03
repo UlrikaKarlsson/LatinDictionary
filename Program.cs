@@ -12,23 +12,24 @@ namespace LatinDictionary
         {
             //declare variables
             string userInput = "";
-            string[] menu = {"1. New latin word", "2. Quit"};
-
+            int[] menu = new int[] { 1, 2 };
+            int menuChoice = 0, menu1 = 0, menu2 = 1;
             Dictionary<string, string> latinDictionary = new Dictionary<string, string>();
             Console.WriteLine("**** Latin dictionary ****\n");
 
             bool quit = false;
 
             do
-            {
-                foreach(string s in menu)
-                {
-                    Console.WriteLine(s);
-                }
-                Console.Write("Select an option from the meny: ");
-
+            { 
+                Console.WriteLine("{0} Insert latin word", menu[menu1]);
+                Console.WriteLine("{0} Exit", menu[menu2]);
+                Console.Write("Select an option from the meny:" );            
+                
+               
                 userInput = Console.ReadLine();
-                if (userInput == "quit")
+                menuChoice = int.Parse(userInput);
+
+                if (menuChoice == menu[menu2])
                 {
                     quit = true;
                 }
