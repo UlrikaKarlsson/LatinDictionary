@@ -12,9 +12,19 @@ namespace LatinDictionary
         {
             //declare variables
             string userInput = "";
+            Dictionary<string, string> latinDictionary = new Dictionary<string, string>();
+            Console.WriteLine("**** Latin dictionary, write quit to exit ****");
+            bool quit = false;
 
-            Console.Write("Please insert latin word in dictionary: ");
+            do
+            {
+                Console.Write("Insert new latin word: ");
+                userInput = Console.ReadLine();
+            }
+            while (quit != true);
+            {
 
+            }
         }
     }
 }
